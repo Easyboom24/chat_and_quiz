@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_chat">
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.chatquiz.ui.chat.ChatFragment"
+        android:label="@string/title_liveChat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_navigation_chat_to_navigation_message"
+            app:destination="@id/navigation_message" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_quiz"
+        android:name="com.example.chatquiz.ui.quiz.QuizFragment"
+        android:label="@string/title_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_navigation_quiz_to_navigation_processQuiz"
+            app:destination="@id/navigation_processQuiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.example.chatquiz.Message"
+        android:label="Ваше сообщение"
+        tools:layout="@layout/message_fragment" >
+        <action
+            android:id="@+id/action_navigation_message_to_navigation_chat"
+            app:destination="@id/navigation_chat" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_processQuiz"
+        android:name="com.example.chatquiz.ProcessQuizFragment"
+        android:label="process_quiz_fragment"
+        tools:layout="@layout/process_quiz_fragment" >
+        <action
+            android:id="@+id/action_navigation_processQuiz_to_navigation_quiz"
+            app:destination="@id/navigation_quiz" />
+        <action
+            android:id="@+id/action_navigation_processQuiz_to_endQuizFragment"
+            app:destination="@id/navigation_endQuiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_endQuiz"
+        android:name="com.example.chatquiz.EndQuizFragment"
+        android:label="end_quiz_fragment"
+        tools:layout="@layout/end_quiz_fragment" />
+
+</navigation>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Chat &amp; Quiz</string>
+    <string name="title_chat">Чат</string>
+    <string name="title_quiz">Викторина</string>
+    <string name="title_liveChat">Живой чат</string>
+    <string name="title_write">Ваше сообщение</string>
+    <string name="title_close">Вернуться к чату</string>
+    <string name="title_welcomeToQuiz">Предлагаем вам сыграть в нашу юбилейную викторину, ответьте на десять вопросов о лисах и станьте победителем</string>
+</resources>
